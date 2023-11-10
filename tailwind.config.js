@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -26,8 +28,8 @@ module.exports = {
       },
       backgroundImage: {
         'explosion': 'url("/bg-explosion.png")',
-        'circles': 'url("/bg-circles.png")',
-        'circleStar': 'url("/bg-circle-star.svg")',
+        'circles': 'url("/circles.png")',
+        'circleStar': 'url("/circle-star.svg")',
         'site': 'url("/site-bg.svg")',
       },
       animation : {
@@ -35,5 +37,18 @@ module.exports = {
       }
     },
   },
-  plugins: [require('tailwind-scrollbar')],
+  plugins: [
+    require('tailwind-scrollbar'),
+    plugin(function({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          'translate-z': (value) => ({
+            '--tw-translate-z': value,
+            transform: ` translate3d(var(--tw-translate-x), var(--tw-translate-y), var(--tw-translate-z)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))`,
+          }),
+        },
+        { values: theme('translate') }
+      )
+    })
+  ],
 }

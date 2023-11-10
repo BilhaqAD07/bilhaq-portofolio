@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useRouter } from 'next/navigation';
 
 import {
   HiHome,
@@ -23,7 +22,6 @@ export const navData = [
 
 export const Nav = () => {
   const currentRoute = usePathname();
-  const router = useRouter();
 
   return (
     <nav className='flex flex-col items-center xl:justify-center gap-y-4 fixed h-max bottom-0 mt-auto xl:left-[2%] z-50 top-0 w-full xl:w-16 xl:max-w-md xl:h-screen'>
