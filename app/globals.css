@@ -18,6 +18,10 @@
   color: #f13024;
 }
 
+.img-mirror {
+    transform: scale(-1, 1);
+}
+
 @layer base {
   body {
     @apply bg-secondary overflow-hidden leading-relaxed;

@@ -26,8 +26,7 @@ export const ContainerParticles = () => {
         interactivity: {
           events: {
             onClick: {
-              enable: true,
-              mode: 'push',
+              enable: false,
             },
             onhover: {
               enable: true,
@@ -47,13 +46,13 @@ export const ContainerParticles = () => {
         },
         particles: {
           color: {
-            value: '#e67e2e',
+            value: '#ff2',
           },
           links: {
-            color: '#f5d393',
+            color: '#3fe',
             distance: 150,
             enable: true,
-            opacity: 0.5,
+            opacity: 0.7,
             width: 1
           },
           collisions: {

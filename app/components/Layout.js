@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Poppins } from 'next/font/google'
 import { Nav } from './Nav'
 import { Header } from './Header'
@@ -14,23 +14,16 @@ const poppins = Poppins ({
 })
 
 // Router 
-import { useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
 // Franer motion
 import { AnimatePresence, motion } from 'framer-motion'
 
 export default function BaseLayout ({ children }) {
-  const router = useRouter()
-
-  useEffect(() => {
-    const handleRouteChange = () => {
-      router.refresh
-    }
-  })
 
   return (
     <AnimatePresence mode='wait'>
-      <motion.div key={router.route} className='h-full'>
+      <motion.div className='h-full'>
         <Transition/>
         <div className={`page bg-site text-white bg-cover bg-no-repeat ${poppins.variable} relative`}>
           <TopLeftImg/>
