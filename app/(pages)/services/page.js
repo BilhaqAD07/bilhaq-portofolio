@@ -1,16 +1,6 @@
 'use client'
 import React from 'react'
 
-// Icons
-import {
-
-} from 'react-icons/rx'
-
-// Service data
-export const serviceData = [
-
-]
-
 // components
 import { ServiceSlider } from '../../components/ServiceSlider'
 import { Bulb } from '../../components/Bulb'
