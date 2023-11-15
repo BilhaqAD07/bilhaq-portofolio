@@ -37,7 +37,7 @@ function Home() {
             exit='hidden' 
             className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur alias ipsum, nobis modi ab aperiam vero ad ex autem tenetur amet repellendus voluptatibus, harum quos itaque omnis rerum pariatur ut.
+            I just finished my portofolio, feel free to enjoy this website.
           </motion.p>
           {/* Button */}
           <div className="flex justify-center xl:hidden relative">

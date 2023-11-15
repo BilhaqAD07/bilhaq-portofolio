@@ -13,7 +13,7 @@ import { fadeIn, variants } from '../../../variant'
 
 export default function Work() {
   return (
-    <div className='h-screen bg-primary/30 py-32'>
+    <div className='h-screen overflow-y-scroll sm:overflow-hidden bg-primary/30 py-32'>
       <Circles />
       <div className="container mx-auto">
         <div className='flex flex-col xl:flex-row gap-x-8'>
@@ -45,7 +45,7 @@ export default function Work() {
             initial='hidden'
             animate='show'
             exit='hidden' 
-            className="w-full xl:max-w-[65%]"
+            className="w-full xl:max-w-[65%] xss:pb-20 sm:pb-0"
           >
             <WorkSlider/>
           </motion.div>

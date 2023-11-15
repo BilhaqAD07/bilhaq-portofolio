@@ -13,7 +13,7 @@ import { fadeIn, variants } from '../../../variant'
 
 export default function Services() {
   return (
-    <div className='h-screen bg-primary/30 py-40'>
+    <div className='h-screen xxs:overflow-y-scroll sm:overflow-y-hidden bg-primary/30 py-40 xxs:pb-40 sm:0'>
       <Circles />
       <div className="container mx-auto">
         <div className='flex flex-col xl:flex-row gap-x-8'>

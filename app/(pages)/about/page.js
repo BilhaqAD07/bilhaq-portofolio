@@ -99,7 +99,7 @@ function About() {
   console.log(index)
 
   return (
-    <div className='h-full bg-primary/30 py-40 text-center xl:text-left'>
+    <div className='h-full xxs:overflow-y-scroll sm:overflow-y-hidden bg-primary/30 py-32 text-center xl:text-left'>
       <Circles/>
 
       {/* Avatar img*/}
@@ -180,7 +180,7 @@ function About() {
               )
             })}
           </div>
-          <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
+          <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 xxs:pb-20 xs:pb-0 items-center xl:items-start">
             {aboutData[index].info.map((item, itemIndex) => {
               return (
                 <div 
