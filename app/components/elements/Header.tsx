@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 
 // Components 
-import { Social } from '../components/Social'
+import { Social } from './Social'
 
 export const Header = () => {
   return (

@@ -2,14 +2,14 @@
 import React from 'react'
 
 // Components
-import { Circles } from '../../components/Circles'
+import { Circles } from '../../components/elements/Circles'
 
 // Icons
 import { BsArrowRight } from 'react-icons/bs'
 
 // Framer-motion
 import { motion } from 'framer-motion'
-import { fadeIn } from '../../../variant'
+import { fadeIn } from '../../components/framer/variant'
 
 export default function Contact() {
   return (

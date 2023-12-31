@@ -2,15 +2,15 @@
 import React from 'react'
 
 // components
-import { ContainerParticles } from './components/ContainerParticles'
-import { Button }  from './components/Button'
-import { Avatar } from './components/Avatar'
+import { ContainerParticles } from './components/elements/ContainerParticles'
+import { Button }  from './components/homepage/Button'
+import { Avatar } from './components/elements/Avatar'
 
 // framer-motion
 import { motion } from 'framer-motion'
 
 // Variants
-import { fadeIn } from '../variant'
+import { fadeIn } from './components/framer/variant'
 
 function Home() {
   return (
@@ -72,7 +72,7 @@ function Home() {
           transition={{ duration: 1, ease: 'easeInOut' }} 
           className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[8%]"
           >
-          <Avatar className='mix-blend-color-dodge'/>
+          <Avatar/>
         </motion.div>
       </div>
     </div>

@@ -2,18 +2,18 @@
 import React from 'react'
 
 // components
-import { ServiceSlider } from '../../components/ServiceSlider'
-import { Bulb } from '../../components/Bulb'
-import { Circles } from '../../components/Circles'
+import { WorkSlider } from '../../components/slider/WorkSlider'
+import { Bulb } from '../../components/elements/Bulb'
+import { Circles } from '../../components/elements/Circles'
 
 // framer motion
 import { motion } from 'framer-motion'
-import { fadeIn, variants } from '../../../variant'
+import { fadeIn } from '../../components/framer/variant'
 
 
-export default function Services() {
+export default function Work() {
   return (
-    <div className='h-screen xxs:overflow-y-scroll sm:overflow-y-hidden bg-primary/30 py-40 xxs:pb-40 sm:0'>
+    <div className='h-screen overflow-y-scroll sm:overflow-hidden bg-primary/30 py-32'>
       <Circles />
       <div className="container mx-auto">
         <div className='flex flex-col xl:flex-row gap-x-8'>
@@ -24,9 +24,9 @@ export default function Services() {
               initial='hidden'
               animate='show'
               exit='hidden' 
-              className="text-3xl xl:text-5xl font-semibold xl:mt-8 mb-4"
+              className="text-3xl font-semibold xl:text-5xl xl:mt-12 mb-4"
             >
-              My Services <span className='text-accent'>.</span>
+              My Work <span className='text-accent'>.</span>
             </motion.h2>
             <motion.p 
               variants={fadeIn('up', 0.4)}
@@ -38,15 +38,16 @@ export default function Services() {
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam similique minus, doloremque consequatur harum deleniti fuga perspiciatis unde labore iste pariatur accusamus numquam architecto fugit atque aliquid ipsam beatae veniam.
             </motion.p>
           </div>
+
+          {/* Slider */}
           <motion.div 
             variants={fadeIn('down', 0.6)}
             initial='hidden'
             animate='show'
             exit='hidden' 
-            className="w-full xl:max-w-[65%]"
+            className="w-full xl:max-w-[65%] xss:pb-20 sm:pb-0"
           >
-            {/* Slider */}
-            <ServiceSlider/>
+            <WorkSlider/>
           </motion.div>
         </div>
       </div>

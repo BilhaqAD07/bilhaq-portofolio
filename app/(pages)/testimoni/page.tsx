@@ -2,11 +2,11 @@
 import React from 'react'
 
 // Components
-import { TestimoniSlider } from '../../components/TestimoniSlider'
+import { TestimoniSlider } from '../../components/slider/TestimoniSlider'
 
 // Framer-motion
 import { motion } from 'framer-motion'
-import { fadeIn } from '../../../variant'
+import { fadeIn } from '../../components/framer/variant'
 
 export default function Testimoni() {
   return (

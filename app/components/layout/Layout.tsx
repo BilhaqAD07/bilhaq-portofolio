@@ -1,10 +1,10 @@
 'use client'
 import React from 'react'
 import { Poppins } from 'next/font/google'
-import { Nav } from './Nav'
-import { Header } from './Header'
-import { TopLeftImg } from './TopLeftImg'
-import { Transition } from './Transition'
+import { Nav } from '../navigation/Nav'
+import { Header } from '../elements/Header'
+import { TopLeftImg } from '../elements/TopLeftImg'
+import { Transition } from '../framer/Transition'
 
 // Font
 const poppins = Poppins ({
@@ -12,9 +12,6 @@ const poppins = Poppins ({
     variable: '--font-poppins',
     weight: ['100','200','300','400','500','600','700','800']
 })
-
-// Router 
-import { usePathname } from 'next/navigation'
 
 // Franer motion
 import { AnimatePresence, motion } from 'framer-motion'
@@ -25,7 +22,7 @@ export default function BaseLayout ({ children }) {
     <AnimatePresence mode='wait'>
       <motion.div className='h-full'>
         <Transition/>
-        <div className={`page bg-site text-white bg-cover bg-no-repeat ${poppins.variable} relative`}>
+        <div className={`page bg-site text-white flex flex-col justify-between bg-cover bg-no-repeat ${poppins.variable} relative`}>
           <TopLeftImg/>
           <Nav/>
           <Header/>

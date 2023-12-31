@@ -84,12 +84,12 @@ const aboutData = [
 ]
 
 // Components 
-import { Avatar } from '../../components/Avatar'
-import { Circles } from '../../components/Circles'
+import { Avatar } from '../../components/elements/Avatar'
+import { Circles } from '../../components/elements/Circles'
 
 // Framer-motion
 import { motion } from 'framer-motion'
-import { fadeIn } from '../../../variant'
+import { fadeIn } from '../../components/framer/variant'
 
 // Counters
 import CountUp from 'react-countup'

@@ -1,5 +1,5 @@
 import { Poppins } from 'next/font/google'
-import BaseLayout from './components/Layout'
+import BaseLayout from './components/layout/Layout'
 import './globals.css'
 
 const poppins = Poppins ({
