@@ -1,36 +1,24 @@
-'use client'
 import React from 'react'
+import { Metadata } from 'next'
 
 // Components
-import { TestimoniSlider } from '../../components/slider/TestimoniSlider'
+import TestimoniPage from '@/app/components/testimoni/TestimoniPage'
 
-// Framer-motion
-import { motion } from 'framer-motion'
-import { fadeIn } from '../../components/framer/variant'
+export const metadata: Metadata = {
+  title: 'Testimonial',
+  description: 'This is my testimonial page, you can see my testimonials here.',
+  alternates: {
+    canonical: '/testimoni',
+    languages: {
+      'en': '/en/testimoni',
+    }
+  }
+}
 
-export default function Testimoni() {
+function Testimoni() {
   return (
-    <div className='h-full bg-primary/30 py-8 pb-40 md:pb-28 md:py-28 text-center'>
-      <div className='container mx-auto h-full flex flex-col justify-center'>
-        {/* Title */}
-        <motion.h2
-          variants={fadeIn('up', 0.2)}
-          initial='hidden'
-          animate='show'
-          exit='hidden' 
-          className='text-3xl font-semibold xl:text-5xl mb-4'>
-          What clients <span className='text-accent'>say.</span>
-        </motion.h2>
-        {/* Slider */}
-        <motion.div
-          variants={fadeIn('up', 0.4)}
-          initial='hidden'
-          animate='show'
-          exit='hidden'
-        >
-          <TestimoniSlider />
-        </motion.div>
-      </div>
-    </div>
+    <TestimoniPage/>
   )
 }
+
+export default Testimoni

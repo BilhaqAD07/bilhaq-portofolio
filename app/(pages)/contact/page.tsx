@@ -1,34 +1,24 @@
-'use client'
 import React from 'react'
 
 // Components
-import { Circles } from '../../components/elements/Circles'
-import ContactForm from '@/app/components/about/Form'
+import ContactPage from '@/app/components/contact/ContactPage'
+import { Metadata } from 'next'
 
-// Framer-motion
-import { motion } from 'framer-motion'
-import { fadeIn } from '@/app/components/framer/variant'
+export const metadata: Metadata = {
+  title: 'Contact Me',
+  description: 'This is my contact page, if you have any questions, please contact me.',
+  alternates: {
+    canonical: '/contact',
+    languages: {
+      'en': '/en/contact',
+    }
+  }
+}
 
-export default function Contact() {
+function Contact() {
   return (
-    <div className='h-full bg-primary/30 py-28'>
-      <div className="container mx-auto text-center xl:text-left flex items-center justify-center">
-        {/* Text & Form */}
-        <div className="flex flex-col w-full max-w-[700px]">
-            {/* Text */}
-            <motion.h2 
-                variants={fadeIn('up', 0.2)}
-                initial='hidden'
-                animate='show'
-                exit='hidden'
-                className='text-3xl xl:text-5xl font-semibold mb-12'
-            >
-                Let&#39;s <span className='text-accent'>connect.</span>
-            </motion.h2>
-            {/* Forms */}
-            <ContactForm/>
-        </div>
-      </div>
-    </div>
+    <ContactPage/>
   )
 }
+
+export default Contact

@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { fadeIn } from '../../components/framer/variant'
+import { fadeIn } from '../framer/variant'
 import { BsArrowRight } from 'react-icons/bs'
 
 
