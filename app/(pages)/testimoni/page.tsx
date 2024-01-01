@@ -10,7 +10,7 @@ import { fadeIn } from '../../components/framer/variant'
 
 export default function Testimoni() {
   return (
-    <div className='h-full xxs:overflow-y-scroll sm:overflow-hidden bg-primary/30 py-40 xxs:pb-60 text-center'>
+    <div className='h-full bg-primary/30 py-8 pb-40 md:pb-28 md:py-28 text-center'>
       <div className='container mx-auto h-full flex flex-col justify-center'>
         {/* Title */}
         <motion.h2

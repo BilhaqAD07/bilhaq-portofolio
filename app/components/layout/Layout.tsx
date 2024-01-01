@@ -6,23 +6,16 @@ import { Header } from '../elements/Header'
 import { TopLeftImg } from '../elements/TopLeftImg'
 import { Transition } from '../framer/Transition'
 
-// Font
-const poppins = Poppins ({
-    subsets: ['latin'],
-    variable: '--font-poppins',
-    weight: ['100','200','300','400','500','600','700','800']
-})
-
 // Franer motion
 import { AnimatePresence, motion } from 'framer-motion'
 
-export default function BaseLayout ({ children }) {
+const BaseLayout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <AnimatePresence mode='wait'>
       <motion.div className='h-full'>
         <Transition/>
-        <div className={`page bg-site text-white flex flex-col justify-between bg-cover bg-no-repeat ${poppins.variable} relative`}>
+        <div className={`page bg-site text-white flex flex-col justify-between bg-cover bg-no-repeat relative`}>
           <TopLeftImg/>
           <Nav/>
           <Header/>
@@ -32,3 +25,5 @@ export default function BaseLayout ({ children }) {
     </AnimatePresence>
   )
 }
+
+export default BaseLayout

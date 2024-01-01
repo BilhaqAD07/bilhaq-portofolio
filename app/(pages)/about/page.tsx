@@ -18,7 +18,7 @@ import {
 } from 'react-icons/si'
 
 // About Data 
-const aboutData = [
+const aboutData : { title: string, info: { title: string, stage?: string, icons?: any } [] } [] = [
   {
     title: 'skills',
     info: [
@@ -96,7 +96,6 @@ import CountUp from 'react-countup'
 
 function About() {
   const [index, setIndex] = useState(0)
-  console.log(index)
 
   return (
     <div className='h-full xxs:overflow-y-scroll sm:overflow-y-hidden bg-primary/30 py-32 text-center xl:text-left'>
@@ -134,7 +133,7 @@ function About() {
             2 years agoo, I began freelancing as a developer. Since then, i&#39;ve done remote work for agencies.
           </motion.p>
           {/* Counters */}
-          <div
+          <motion.div
             variants={fadeIn('right', 0.6)}
             initial='hidden'
             animate='show'
@@ -157,7 +156,7 @@ function About() {
                 <div className='text-xl uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>Finished Projects</div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
         {/* Info */}
         <motion.div 
@@ -193,7 +192,7 @@ function About() {
                   <div>{item.stage}</div>
                   <div className="flex gap-x-4">
                     {/* Icons */}
-                    {item.icons?.map((icon, itemIndex) => {
+                    {item.icons?.map((icon: any) => {
                       return <div className='text-2xl text-white'>{icon}</div>
                     })}
                   </div>

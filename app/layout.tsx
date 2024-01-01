@@ -13,7 +13,7 @@ export const metadata = {
   description: 'This website describe me',
 }
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
         <body className={poppins.className}>

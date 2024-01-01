@@ -26,7 +26,7 @@ function Home() {
             exit='hidden'
             className='text-4xl xl:text-6xl font-semibold mb-4'
           >
-            Hello Guys, <br/>
+            Hello, <br/>
             I&#39;m <span className='text-accent'>Software Engineer</span>
           </motion.h1>
           {/* Subtitle */}

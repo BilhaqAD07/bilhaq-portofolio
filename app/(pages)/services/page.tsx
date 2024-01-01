@@ -8,12 +8,12 @@ import { Circles } from '../../components/elements/Circles'
 
 // framer motion
 import { motion } from 'framer-motion'
-import { fadeIn, variants } from '../../components/framer/variant'
+import { fadeIn } from '../../components/framer/variant'
 
 
 export default function Services() {
   return (
-    <div className='h-screen xxs:overflow-y-scroll sm:overflow-y-hidden bg-primary/30 py-40 xxs:pb-40 sm:0'>
+    <div className='h-screen overflow-y-scroll md:overflow-y-hidden bg-primary/30 py-40'>
       <Circles />
       <div className="container mx-auto">
         <div className='flex flex-col xl:flex-row gap-x-8'>
@@ -33,9 +33,12 @@ export default function Services() {
               initial='hidden'
               animate='show'
               exit='hidden' 
-              className="mb-4 max-w-[400px] mx-auto lg:mx-0"
+              className="mb-4 max-w-[400px] mx-auto lg:mx-0 hidden md:block"
             >
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam similique minus, doloremque consequatur harum deleniti fuga perspiciatis unde labore iste pariatur accusamus numquam architecto fugit atque aliquid ipsam beatae veniam.
+              I offer a range of services designed to help you achieve your digital goals. Whether you&#39;re 
+              looking for web development, UI/UX design, or custom software solutions, my expertise is here 
+              to bring your vision to life. With a focus on modern technologies and user-centered design, 
+              I ensure that every project is crafted to the highest standards of quality and innovation.
             </motion.p>
           </div>
           <motion.div 

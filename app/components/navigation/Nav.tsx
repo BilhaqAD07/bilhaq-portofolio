@@ -31,7 +31,7 @@ export const Nav = () => {
           return (
             <Link className={`${link.path === currentRoute ? 'text-accent' : ''} relative flex items-center group hover:text-accent transition-all duration-300`} key={index} href={link.path}>
               {/* Tooltip */}
-              <div className="absolute pl-14 left-0 hidden xl:group-hover:flex">
+              <div className="absolute pl-14 left-0 hidden  xl:group-hover:flex">
                 <div className="bg-white relative flex text-primary items-center p-[6px] rounded-[3px]">
                   <div className="text-[12px] leading-none font-semibold capitalize">
                     {link.name}

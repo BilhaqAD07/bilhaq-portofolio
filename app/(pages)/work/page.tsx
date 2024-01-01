@@ -13,7 +13,7 @@ import { fadeIn } from '../../components/framer/variant'
 
 export default function Work() {
   return (
-    <div className='h-screen overflow-y-scroll sm:overflow-hidden bg-primary/30 py-32'>
+    <div className='h-screen overflow-y-scroll md:overflow-hidden bg-primary/30 py-28 md:py-32'>
       <Circles />
       <div className="container mx-auto">
         <div className='flex flex-col xl:flex-row gap-x-8'>
@@ -33,9 +33,9 @@ export default function Work() {
               initial='hidden'
               animate='show'
               exit='hidden' 
-              className="mb-4 max-w-[400px] mx-auto lg:mx-0"
+              className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-sm md:text-base"
             >
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam similique minus, doloremque consequatur harum deleniti fuga perspiciatis unde labore iste pariatur accusamus numquam architecto fugit atque aliquid ipsam beatae veniam.
+              As a passionate developer, I craft web experiences that are not only visually appealing but also functionally robust. My projects reflect a blend of modern design trends and cutting-edge technologies, resulting in unique and engaging digital solutions that resonate with users and meet business objectives.
             </motion.p>
           </div>
 
