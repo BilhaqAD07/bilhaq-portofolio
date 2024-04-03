@@ -22,11 +22,6 @@ import { FreeMode, Pagination } from 'swiper/modules'
 // Service Data
 const serviceData = [
   {
-    icon: <RxCrop />,
-    title: 'Branding',
-    desc: 'Branding services to enhance your brand identity.'
-  },
-  {
     icon: <RxPencil2 />,
     title: 'Design',
     desc: 'Design solutions tailored to your business needs.'

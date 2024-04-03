@@ -19,40 +19,48 @@ const workSlides = {
     {
       images: [
         {
-          title: 'title',
-          path: '/thumb1.jpg',
+          title: 'PPLK ITERA 2022',
+          path: '/PPLK.png',
+          link: 'https://pplk2022.com/'
         },
         {
-          title: 'title',
-          path: '/thumb2.jpg',
+          title: 'WEB KM ITERA',
+          path: '/km-itera.png',
+          link: 'https://teknokm.my.id/'
         },
         {
-          title: 'title',
-          path: '/thumb3.jpg',
+          title: 'Human Resource Information System PT GATRA MAPAN',
+          path: '/HRIS-GatraMapan.png',
+          link: 'https://hr.masqomar.site/',
         },
         {
-          title: 'title',
-          path: '/thumb4.jpg',
+          title: 'C-Sports Mobile Application',
+          path: '/C-Sports.png',
+          link: 'https://github.com/Shercosta/csport',
         },
       ],
     },
     {
       images: [
         {
-          title: 'title',
-          path: '/thumb4.jpg',
+          title: 'Song Finder AI Model',
+          path: '/Song-Finder.png',
+          link: 'https://github.com/revanfz/IR-Song-Finder.git',
         },
         {
           title: 'title',
           path: '/thumb3.jpg',
+          link: '',
         },
         {
           title: 'title',
           path: '/thumb2.jpg',
+          link: '',
         },
         {
           title: 'title',
           path: '/thumb1.jpg',
+          link: '',
         },
       ],
     },
@@ -76,9 +84,9 @@ export const WorkSlider = () => {
               {slide.images.map((image, index) => {
                 return (
                   <div className="relative rounded-lg overflow-hidden flex items-center justify-center group" key={index}>
-                    <div className="flex items-center justify-center relative overflow-hidden group">
+                    <a href={image.link} className="flex items-center justify-center relative overflow-hidden group">
                       {/* Image */}
-                      <Image src={image.path} width={500} height={300} alt=''/>
+                      <Image src={image.path} width={500} height={300} className='w-[372px] h-52 object-fill' alt=''/>
                       {/* Overflow gradient */}
                       <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
                       {/* Title */}
@@ -98,7 +106,7 @@ export const WorkSlider = () => {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                 ) 
               })}
